@@ -14,19 +14,26 @@ class User extends CI_Controller
         if (empty($this->session->userdata('user_logged_in'))) {
             $this->load->view('index');
         } else {
-            redirect('dashboard');
+            redirect('user-dashboard');
         }
     }
 
-    // function login()
-    // {
-    //     $Check = $this->Adminmodel->checkLogin($_POST);
-    //     if ($Check) {
-    //         $this->session->set_flashdata('success', 'Admin Logged in Successfully !!');
-    //         redirect(base_url('dashboard'));
-    //     } else {
-    //         $this->session->set_flashdata('error', 'Some Error Occurred');
-    //         redirect(base_url() . 'login');
-    //     }
-    // }
+    function login()
+    {
+        $this->form_validation->set_rules('userID', 'UserID', 'required|trim');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+
+        if ($this->form_validation->run() == false) {
+            $this->index();
+        } else {
+            $chk = $this->Usermodel->canLogin($_POST);
+            if ($chk) {
+                $this->session->set_flashdata('success', 'User Logged in');
+                redirect(base_url('user-dashboard'));
+            } else {
+                $this->session->set_flashdata('error', 'Some Error Occurred');
+                redirect($this->index());
+            }
+        }
+    }
 }

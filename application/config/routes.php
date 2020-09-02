@@ -64,4 +64,10 @@ $route['logout'] = 'admin/dashboard/logOut';
 
 // ---User Controller Start Here---
 $route['user-login'] = 'user/user';
+$route['user-auth'] = 'user/user/login';
+$route['user-dashboard'] = 'user/dashboard';
+$route['user-logout'] = 'user/dashboard/logout';
+$route['user-x3'] = 'user/dashboard/x3Branch';
+$route['user-partner'] = 'user/dashboard/partnerTree';
+$route['user-x4'] = 'user/dashboard/x4Branch';
 // ---User Controller End Here---

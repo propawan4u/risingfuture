@@ -23,7 +23,7 @@
 .genealogy-body{
     white-space: nowrap;
     overflow-y: hidden;
-    padding: 50px;
+    /* padding: 50px; */
     /* min-height: 500px; */
     padding-top: 10px;
 }
@@ -37,7 +37,7 @@
     float: left; text-align: center;
     list-style-type: none;
     position: relative;
-    padding: 20px 5px 0 5px;
+    padding: 20px 0px 0 2px;
 }
 .genealogy-tree li::before, .genealogy-tree li::after{
     content: '';
@@ -97,8 +97,8 @@
 }
 
 /*--------------memeber-card-design----------*/
-.member-view-box{
-    padding:0px 20px;
+.member-view-box {
+    padding:0px 0px;
     text-align: center;
     border-radius: 4px;
     position: relative;
@@ -108,8 +108,8 @@
     position: relative;
 }
 .member-image img{
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
     border-radius: 6px;
   background-color :#000;
   z-index: 1;

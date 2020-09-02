@@ -16,7 +16,11 @@
   <link rel='shortcut icon' type='image/x-icon' href='<?php echo base_url() ?>assets/img/favicon.ico' />
   <style>
     body {
-      background-color: #274f8a;
+      margin: 0px;
+      padding: 0px;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(242, 176, 247, 1) 100%);
+      height: 100%;
+      line-height: 2.85;
     }
 
     .card-bg {
@@ -32,10 +36,17 @@
       background-color: lightseagreen;
     }
 
-    /* input {
-      width: 25px;
-      height: 10px;
-    } */
+    .card {
+      background: linear-gradient(0deg, rgba(142, 127, 255, 0.8155637254901961) 0%, rgba(243, 102, 255, 0.8071603641456583) 100%);
+    }
+
+    .text-dark1 {
+      color: #373739;
+    }
+
+    .text-dark2 {
+      color: #6d6e73;
+    }
   </style>
 </head>
 
@@ -45,21 +56,22 @@
     <section class="section">
       <div class="container mt-5">
         <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-8 col-md-8 col-sm-8">
-
+          <div class="col-md-4">
+            <img src="<?php echo base_url(); ?>assets/uploads/rising-future.png" alt="rising-future.png" width="">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 offset-md-2">
             <div class="card card-primary card-bg">
-              <!-- <div class="card-header float-right">
-                <h3 class="text-light">Admin Login</h3>
+              <!-- <div class="card-header float-right mx-auto">
+                
               </div> -->
               <div class="card-body">
-                <form method="POST" action="<?php echo base_url() ?>check-login" class="needs-validation" novalidate="">
+                <form method="POST" action="<?php echo base_url() ?>user-auth" class="needs-validation" novalidate="">
                   <div class="row">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
                       <div class="form-group">
                         <div>
-                          <h4 class="text-light">The entrance to the office</h4>
+                          <h4 class="text-dark1">The Entrance to the Office</h4>
                         </div>
                         <div>
                           <small class="text-light">For access to all the functions of your personal account, use Login</small>
@@ -67,15 +79,17 @@
                       </div>
 
                       <div class="form-group">
-                        <label for="email" class="text-light">Enter Account ID</label>
-                        <input id="email" type="text" class="form-control text-box" name="email" placeholder="Partner ID" required autofocus>
+                        <label for="userID" class="text-light">Enter Account ID</label>
+                        <input id="userID" type="text" class="form-control text-box" value="<?php echo set_value('userID'); ?>" name="userID" placeholder="Partner ID" autofocus>
+                        <span class="text-danger"><?php echo form_error("userID"); ?></span>
                         <div class="invalid-feedback">
                           Please fill in your email
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="email" class="text-light">Enter Password</label>
-                        <input id="password" type="password" class="form-control text-box" name="password" placeholder="Password" required>
+                        <label for="password" class="text-light">Enter Password</label>
+                        <input id="password" type="password" class="form-control text-box" name="password" placeholder="Password">
+                        <span class="text-danger"><?php echo form_error("password"); ?></span>
                         <div class="invalid-feedback">
                           please fill in your password
                         </div>
@@ -84,7 +98,7 @@
                   </div>
               </div>
               <div class="form-group" align="center">
-                <button type="submit" name="submit" class="btn btn-success btn-xl">Authorization</button>
+                <button type="submit" name="submit" class="btn btn-success btn-lg rounded-pill">Authorization</button>
               </div>
 
               </form>

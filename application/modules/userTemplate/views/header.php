@@ -32,7 +32,9 @@
     }
 
     body {
-      background-color: #563d7c;
+      height: 100vh;
+      background: linear-gradient(90deg, rgba(206, 168, 255, 1) 0%, rgba(119, 15, 255, 1) 35%, rgba(119, 15, 255, 1) 100%);
+      /* background: linear-gradient(0deg, rgba(206, 168, 255, 1) 0%, rgba(119, 15, 255, 1) 100%); */
     }
 
     .nav {
@@ -65,6 +67,11 @@
     .text-pink {
       color: #fc38ac;
     }
+
+    .member-image img {
+      width: 35px;
+      height: 35px;
+    }
   </style>
 </head>
 
@@ -73,8 +80,8 @@
     <div class="">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-md navbar-light">
-          <a class="navbar-brand ml-5" href="#">
-            <img src="<?php echo base_url('assets/uploads/rf-logo.png'); ?>" alt="rf-logo.png" width="200">
+          <a class="navbar-brand" href="<?php echo base_url('user-dashboard'); ?>">
+            <img src="<?php echo base_url('assets/uploads/rising-future.png'); ?>" alt="rising-future.png" width="80">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -115,14 +122,11 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('ulogout'); ?>" title="Logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+                <a class="nav-link" href="<?php echo base_url('user-logout'); ?>" title="Logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
     </div>
-  </section>
-  <section>
-
   </section>
