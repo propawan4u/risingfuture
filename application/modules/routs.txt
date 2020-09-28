@@ -1,0 +1,19 @@
+
+$route['edit-admin'] = 'admin/dashboard/edit_admin';
+$route['up-admin'] = 'admin/dashboard/UpAdmin';
+
+// Transaction Started
+$route['manage-transaction'] = 'admin/dashboard/transaction_details';
+$route['edit-transactions/(:any)'] = 'admin/dashboard/edit_transaction_status';
+$route['update-transaction'] = 'admin/dashboard/update_transaction';
+
+// Transaction End
+
+// Show Debit or Credit Start
+$route['show-debit-credit'] = 'admin/dashboard/show_debit_credit';
+// Show Debit or Credit Ended
+
+// Wallet Request Started
+$route['show-request/(:any)'] = 'admin/dashboard/show_reuquest';
+$route['update-request/(:any)/(:any)/(:any)/(:any)'] = 'admin/dashboard/update_request';
+// Wallet Request Endded
