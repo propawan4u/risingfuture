@@ -60,7 +60,7 @@ $route['dashboard'] = 'admin/dashboard';
 $route['logout'] = 'admin/dashboard/logOut';
 
 // User Registration
-// $route['user-login'] = 'admin/dashboard/user';
+$route['user-login'] = 'admin/dashboard/user';
 $route['user-registration'] = 'admin/dashboard/user_registration';
 $route['user-add'] = 'admin/dashboard/saveUser';
 $route['user-details'] = 'admin/dashboard/user_details';
@@ -148,6 +148,12 @@ $route['direct-partners'] = 'user/dashboard/directPartners';
 // -----------Urls For X4 Branch---------
 $route['user-x4'] = 'user/dashboard/x4Branch';
 // -----------Urls For X4 Branch END---------
+
+
+// Gett All x4 Slots Partner Tree Started
+$route['slots-x4-cycles/(:any)'] = 'user/dashboard/SlotspartnerTreeX4';
+$route['show-tree-for-x4-slots'] = 'user/dashboard/getX4Slots';
+// Gett All x4 Slots Partner Tree Endded
 
 // ---User Controller End Here---
 

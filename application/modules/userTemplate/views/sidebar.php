@@ -7,6 +7,7 @@
         <div class="row">
           <!-- <img src="<?php echo base_url('assets/uploads/rising-future.png'); ?>" class="fa-spin" alt="rising-future.png" width="100"> -->
           <ul class="ml-auto mx-auto">
+            <li class="">Name :- <b><?php echo $LogValue->name; ?></b></li>
             <li class="id-size">User ID :- <?php echo $LogValue->userID; ?></li>
             <li class="font-weight-bold text-white">Balance :- <?php echo $LogValue->balance ?>/-</li>
           </ul>

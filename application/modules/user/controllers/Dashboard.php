@@ -134,14 +134,29 @@ class Dashboard extends CI_Controller
     // ---X4 Breanch---
     public function x4Branch()
     {
-        // $data['cycle_x4'] = $this->DashboardModel->getx4UserData();
         $data['getCyc'] = $this->DashboardModel->getCycX4();
+        $data['getSlots_2'] = $this->DashboardModel->getSlot_2();
+        $data['getSlots_3'] = $this->DashboardModel->getSlot_3();
+        $data['getSlots_4'] = $this->DashboardModel->getSlot_4();
+        $data['getSlots_5'] = $this->DashboardModel->getSlot_5();
+        $data['getSlots_6'] = $this->DashboardModel->getSlot_6();
+        $data['getSlots_7'] = $this->DashboardModel->getSlot_7();
+        $data['getSlots_8'] = $this->DashboardModel->getSlot_8();
+        $data['getSlots_9'] = $this->DashboardModel->getSlot_9();
+        $data['getSlots_10'] = $this->DashboardModel->getSlot_10();
+        $data['getSlots_11'] = $this->DashboardModel->getSlot_11();
+        $data['getSlots_12'] = $this->DashboardModel->getSlot_12();
+        $data['getSlots_13'] = $this->DashboardModel->getSlot_13();
+        $data['getSlots_14'] = $this->DashboardModel->getSlot_14();
+        $data['getSlots_15'] = $this->DashboardModel->getSlot_15();
+        $data['getSlots_16'] = $this->DashboardModel->getSlot_16();
+        $data['getAllSlots'] = $this->DashboardModel->getAllSlotsorUsers();
         $data['title'] = 'User Dashboard';
         $template = 'x4Branch';
         $this->header_and_footer($template, $data);
     }
-    
-        // ---X4 Breanch---
+
+    // ---X4 Breanch---
     public function partnerTreeX4()
     {
         $data['getX4Cycles1'] = $this->DashboardModel->getX4Cycles1();
@@ -261,6 +276,36 @@ class Dashboard extends CI_Controller
         // exit;
         $this->header_and_footer($template, $data);
     }
+    
+    
+     // ---All X4 Slots---
+    public function SlotspartnerTreeX4()
+    {
+        $data['getX4slots1'] = $this->DashboardModel->getX4Slots1();
+        // $data['getX4Slotss'] = $this->DashboardModel->getX4Slotss();
+        // print_r($data['getX4slots1']);
+        // exit;
+        // $data['getCyc'] = $this->DashboardModel->getX4Slots();
+        $data['title'] = 'User Dashboard';
+        $template = 'getx4Slots';
+        $this->header_and_footer($template, $data);
+    }
+
+    // --------Get Data by Ajax for All X4 Slots----------
+    // ---------getting data form cycle x4---------
+    public function getX4Slots()
+    {
+        $this->DashboardModel->getX4Slot($_POST);
+    }
+    
+    // -------data by ajax call0--------]
+     public function getPartnerData()
+    {
+        $this->DashboardModel->getPartnerData($_POST);
+    }
+    
+    
+    
 
 
 }

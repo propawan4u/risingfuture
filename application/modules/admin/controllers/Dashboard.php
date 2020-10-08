@@ -61,15 +61,6 @@ class Dashboard extends CI_Controller
             $this->Adminmodel->upadteAdmin($_POST);
         }
     }
-    // Extra Page
-    function load()
-    {
-        $data['title'] = 'Data Table';
-        $template = 'table';
-        $this->header_and_footer($template, $data);
-    }
-
-    // Endded
 
     // User Registration
 
@@ -123,6 +114,7 @@ class Dashboard extends CI_Controller
             'role' => 2,
             'email' => $this->input->post('user_email'),
             'password' => md5($Pass),
+            'show_pass' => $Pass,
             'contact' => $this->input->post('user_contact'),
             'status' => 1,
             'userID' => $userId,

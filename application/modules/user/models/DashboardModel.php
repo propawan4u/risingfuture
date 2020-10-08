@@ -11,7 +11,6 @@ class DashboardModel extends CI_Model
             redirect(base_url('user-login'));
         }
         $this->load->model('X4workingModel');
-        // $this->load->helper('sendsms_helper');
     }
 
 
@@ -231,6 +230,390 @@ class DashboardModel extends CI_Model
     }
 
     // ---------getting data form cycle x4---------
+    
+    //------------------------- All x4 Slots Started-------------------------//
+
+
+    // ---------getting data form cycle JumpX4slots 2---------
+
+
+    public function getSlot_2()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_2 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 3---------
+
+    public function getSlot_3()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_3 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 4---------
+
+    public function getSlot_4()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_4 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 5---------
+
+
+    public function getSlot_5()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_5 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 6---------
+
+    public function getSlot_6()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_6 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+
+    // ---------getting data form cycle JumpX4slots 7---------
+
+    public function getSlot_7()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_7 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 8---------
+
+    public function getSlot_8()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_8 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 9---------
+
+    public function getSlot_9()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_9 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 10---------
+
+    public function getSlot_10()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_10 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 11---------
+
+    public function getSlot_11()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_11 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 12---------
+
+    public function getSlot_12()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_12 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 13---------
+
+    public function getSlot_13()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_13 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 14---------
+
+    public function getSlot_14()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_14 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 15---------
+
+    public function getSlot_15()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_15 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+    // ---------getting data form cycle JumpX4slots 16---------
+
+    public function getSlot_16()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+        $cycleX4Data = $this->db
+            ->select('t1.*,t3.*,t4.*')
+            ->from('jumpx4slots_16 t1')
+            ->join('user_registration t2', 't2.uid = t1.juID', 'INNER')
+            ->join('parchase_new_slot t3', 't3.Ju_ID = t1.j4id', 'LEFT')
+            ->join('restt_purchased_slots t4', 't4.user_ID = t2.userID', 'LEFT')
+            ->order_by('t1.j4id', 'DESC')
+            ->where(array('t2.uid' => $uid, 't4.slotID' => 2))
+            ->limit(6)
+            ->get()
+            ->result();
+
+        if (!empty($cycleX4Data)) {
+
+            return $cycleX4Data;
+        }
+    }
+
+
+    //------------------------- All x4 Slots Endded-------------------------//
+    
+    function getAllSlotsorUsers()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $userID = $userData['userID'];
+
+        $q = $this->db->select('t1.*,t2.*')
+            ->from('restt_purchased_slots t1')
+            ->join('manage_slots t2', 't2.sid = t1.slotID', 'FULL')
+            ->where(array('user_ID' => $userID, 'slot_value !=' => 500))
+            ->get();
+        if (!empty($q)) {
+            return $q->result();
+        }
+    }
     public function getX4Cycles1()
     {
         $userData = $this->session->userdata('userLoggedIn');
@@ -246,9 +629,7 @@ class DashboardModel extends CI_Model
             ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
             ->get()
             ->result();
-        // $data = array_filter($cycleX4Data);
-        // print_r(array_chunk($cycleX4Data, 6));
-        // exit;
+
 
         if (!empty($cycleX4Data)) {
 
@@ -371,7 +752,7 @@ class DashboardModel extends CI_Model
                 $this->db->insert('cycle_x4', array('cx4id' => $data3->cid, 'partnerID' => $uid));
                 $this->update_balance(200);
                 $this->trans_history(200, $newPartnerLastInsert, $uid);
-                // redirect(base_url('user-dashboard'));
+                
             }
         } else if ($data->level == 1 && $data->branch == 'R' && $data->position == 2 && !empty($newUserID)) {
             $formArrayX4 = array(
@@ -430,7 +811,7 @@ class DashboardModel extends CI_Model
                 $this->db->insert('cycle_x4', array('cx4id' => $data3->cid, 'partnerID' => $uid));
                 $this->update_balance(200);
                 $this->trans_history(200, $newPartnerLastInsert, $uid);
-                // redirect(base_url('user-dashboard'));
+               
             }
         } else if ($data->level == 2 && $data->branch == 'R' && $data->position == 4 && !empty($newUserID)) {
             $formArrayX4 = array(
@@ -486,7 +867,7 @@ class DashboardModel extends CI_Model
 
                 $this->update_balance(200);
                 $this->trans_history(200, $newPartnerLastInsert, $uid);
-                // redirect(base_url('user-dashboard'));
+               
             }
         } else if ($data->level == 2 && $data->branch == 'R' && $data->position == 6 && !empty($newUserID)) {
             $formArrayX4 = array(
@@ -561,18 +942,38 @@ class DashboardModel extends CI_Model
                     'role' => 2,
                     'email' => $this->input->post('email'),
                     'contact' => $this->input->post('contact'),
+                    'show_pass'=> $Pass
                 );
-                $msg = 'Hey this is pawan!!';
-                $this->sendsms(6392452633, $msg);
+               
                 $query = $this->db->insert('user_registration', $formArray); //-----New Partner Registration----
                 $newPartnerLastInsert = $this->db->insert_id();
 
 
                 if ($query) {
+                    
+                    // $this->SendEmailtouser($this->input->post('email'), $Pass,$userID);
+                    
+                    $mob = '91' . $this->input->post('contact');
+                    $msg = 'Hello! ' . $this->input->post('name') . ' Your Partner ID : ' . $newUserId . ' and Password : ' . $Pass . ' Thankyou for connecting in smart contact with Rising Future : http://risingfuture.in/user-login';
+                    $this->sendsms($mob, $msg);
 
                     $this->db->insert('user_details', array('ur_id' => $newPartnerLastInsert));
 
                     $insertSlotQuery = $this->db->insert('purchased_slots', array('user_ID' => $newUserId, 'slotID' => 1));
+                    
+                    $getAllSlots = $this->db->select('*')
+                        ->from('manage_slots')
+                        ->where('slot_value !=', 500)
+                        ->get()
+                        ->result();
+                    foreach ($getAllSlots as $slott) {
+                        $PrAllSlot = array(
+                            'user_ID' => $newUserId,
+                            'slotID' => $slott->sid
+                        );
+
+                        $PurchaseAll = $this->db->insert('restt_purchased_slots', $PrAllSlot);
+                    }
 
                     $this->db->insert('redeem_points', array('new_user_id' => $newUserId, 'points' => 100)); //-----Redeem points added here----
 
@@ -678,90 +1079,23 @@ class DashboardModel extends CI_Model
 
     public function sendsms($mob, $msg)
     {
-        // $curl = curl_init();
-        // curl_setopt_array($curl, array(
-        //     CURLOPT_URL => "https://rest-api.d7networks.com/secure/send",
-        //     CURLOPT_RETURNTRANSFER => true,
-        //     CURLOPT_ENCODING => "",
-        //     CURLOPT_MAXREDIRS => 10,
-        //     CURLOPT_TIMEOUT => 0,
-        //     CURLOPT_FOLLOWLOCATION => true,
-        //     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        //     CURLOPT_CUSTOMREQUEST => "POST",
-        //     CURLOPT_POSTFIELDS => "{\n\t\"to\":\"6392452633\",\n\t\"content\":\"Welcome to D7 sms , we will help you to talk with your customer effectively\",\n\t\"from\":\"SMSINFO\",\n\t\"dlr\":\"yes\",\n\t\"dlr-method\":\"GET\", \n\t\"dlr-level\":\"2\", \n\t\"dlr-url\":\"http://yourcustompostbackurl.com\"\n}",
-        //     CURLOPT_HTTPHEADER => array(
-        //         "Content-Type: application/x-www-form-urlencoded",
-        //         "Authorization: Basic bW5teTk1NjQ6SUtTV3BoT2s="
-        //     ),
-        // ));
-
-        // $response = curl_exec($curl);
-
-        // curl_close($curl);
-        // echo $response;
-        // ----------------------------------------------------------------
         //Send sms to sender and reciever
+        $user = 'risingfuture';
+        $password = 'risingfuture@123';
+        $sid = "RISINGF";
+        $fl = 0;
+        $gwid = 2;
 
-        $senderId = "SKY";
-        $route = 4;
-        $campaign = "OTP";
-        $sms = array(
-            'message' => "Message : $msg",
-            'to' => array($mob)
-        );
-        // //Prepare you post parameters
-        $postData = array(
-            'sender' => $senderId,
-            'campaign' => $campaign,
-            'route' => $route,
-            'sms' => array($sms)
-        );
-        $postDataJson = json_encode($postData);
 
-        // $url = "https://rest-api.d7networks.com/secure/send";
+        $data = "user=" . $user . "&password=" . $password . "&msisdn=" . $mob . "&sid=" . $sid . "&msg=" . $msg . "&fl=" . $fl . "&gwid=" . $gwid;
 
-        // $curl = curl_init();
-        // curl_setopt_array($curl, array(
-        //     CURLOPT_URL => "$url",
-        //     CURLOPT_RETURNTRANSFER => true,
-        //     CURLOPT_CUSTOMREQUEST => "POST",
-        //     CURLOPT_POSTFIELDS => $postDataJson,
-        //     CURLOPT_HTTPHEADER => array(
-        //         "authkey: bW5teTk1NjQ6SUtTV3BoT2s=",
-        //         "content-type: application/json"
-        //     ),
-        // ));
-        // $response = curl_exec($curl);
-        // $err = curl_error($curl);
-        // curl_close($curl);
-        // //Send sms to sender and reciever
-
-        // // $err="<h4 style='color:green'>Message Send successfully</h4>";
-        // echo $response;
-
-        $curl = curl_init();
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://http-api.d7networks.com/send?username=eliz3040&password=och02mhD
-                  &dlr-method=POST&dlr-url=https://4ba60af1.ngrok.io/receive&dlr=yes&dlr-level=3&to=916392452633
-                  &from=sky&content=This%20is%20the%20sample%20content%20sent%20to%20test%20",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => $postDataJson,
-            
-        ));
-        $response = curl_exec($curl);
-        curl_close($curl);
-        if(!empty($response)){
-
-            echo $response;
-        }
+        $ch = curl_init('http://zapsms.co.in/vendorsms/pushsms.aspx?');
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($ch); // This is the result from the API
+        curl_close($ch);
         
-        exit;
     }
 
     public function AddUser()
@@ -789,32 +1123,6 @@ class DashboardModel extends CI_Model
             ->get()
             ->row();
 
-        // $data = $this->db
-        //     ->select('t1.*,t2.*')
-        //     ->from('cycle t1')
-        //     ->join('cycle_x4 t2', 't2.cx4id = t1.cid', 'FULL')
-        //     ->order_by('cid', 'DESC')
-        //     ->limit(1)
-        //     ->where(array('t1.uID' => $uid, 't2.level !=' => '', 't2.branch !=' => '', 't2.position !=' => ''))
-        //     ->get()
-        //     ->row();
-
-        // $data = $this->db->select('t1.*,t2.*,t3.*,t4.*,t5.*,t6.*')
-        //     ->from('cycle t1')
-        //     ->join('cycle_x3 t2', 't2.cx3id = t1.cid', 'INNER')
-        //     ->join('cycle_x4 t3', 't3.cx4id = t1.cid', 'LEFT')
-        //     ->join('user_registration t4', 't4.uid = t1.uID', 'INNER')
-        //     ->join('purchased_slots t5', 't5.user_ID = t4.userID', 'LEFT')
-        //     ->join('manage_slots t6', 't6.sid = t5.slotID', 'LEFT')
-        //     ->order_by('t1.cid', 'DESC')
-        //     ->order_by('t3.x4id', 'DESC')
-        //     ->where(array('t1.uID' => $uid, 't3.level !=' => '', 't3.branch !=' => '', 't3.position !=' => ''))
-        //     ->get()
-        //     ->row();
-
-        // print_r($cycleData);
-        // exit;
-
         if ($cycleData->role == 1) {
 
             $this->adminWorking();
@@ -836,6 +1144,7 @@ class DashboardModel extends CI_Model
                         'role' => 2,
                         'email' => $this->input->post('email'),
                         'contact' => $this->input->post('contact'),
+                        'show_pass'=> $Pass
                     );
 
                     $query = $this->db->insert('user_registration', $formArray); //-----New Partner Registration----
@@ -843,9 +1152,27 @@ class DashboardModel extends CI_Model
                     // $this->X4workingModel->jumpPartner($newUserId, $newPartnerID); //---for testing purpose--
 
                     if ($query) {
+                        
+                        $mob = '91' . $this->input->post('contact');
+                        $msg = 'Hello! ' . $this->input->post('name') . ' Your Partner ID : ' . $newUserId . ' and Password : ' . $Pass . ' Thankyou for connecting in smart contact with Rising Future : http://risingfuture.in/user-login';
+                        $this->sendsms($mob, $msg);
 
                         $this->db->insert('user_details', array('ur_id' => $newPartnerID));
                         $this->db->insert('purchased_slots', array('user_ID' => $newUserId, 'slotID' => 1));
+                        
+                        $getAllSlots = $this->db->select('*')
+                        ->from('manage_slots')
+                        ->where('slot_value !=', 500)
+                        ->get()
+                        ->result();
+                    foreach ($getAllSlots as $slott) {
+                        $PrAllSlot = array(
+                            'user_ID' => $newUserId,
+                            'slotID' => $slott->sid
+                        );
+
+                        $PurchaseAll = $this->db->insert('restt_purchased_slots', $PrAllSlot);
+                    }
                         $this->db->insert('redeem_points', array('new_user_id' => $newUserId, 'points' => 100)); //-----Redeem points added here----
 
                         $walletAmount = ($cycleData->wallet - 500);
@@ -1190,4 +1517,398 @@ class DashboardModel extends CI_Model
             return $q->result();
         }
     }
+    
+    
+    
+    
+    // ---------getting data form All x4 Slots---------
+
+    public function getX4Slots1()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+
+        $SlotId = $this->uri->segment(2);
+
+        if ($SlotId == 2) {
+
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_2 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('t2.uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 3) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_3 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 4) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_4 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 5) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_5 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 6) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_6 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 7) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_7 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 8) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_8 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 9) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_9 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 10) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_10 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 11) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_11 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 12) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_12 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 13) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_13 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 14) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_14 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 15) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_15 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 16) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_16 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'DESC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        }
+
+        if (!empty($cycleX4Data)) {
+
+            // print_r($cycleX4Data);
+            // exit;
+            return array_chunk($cycleX4Data, 6);
+        }
+    }
+
+    public function getX4Slot()
+    {
+        $userData = $this->session->userdata('userLoggedIn');
+        $uid = $userData['uid'];
+
+        // $SlotId = $this->uri->segment(2);
+        $SlotId = $this->input->post('slotId');
+        $key = $this->input->post('key');
+        // exit;
+
+        if ($SlotId == 2) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_2 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.j4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 3) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_3 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 4) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_4 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 5) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_5 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 6) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_6 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 7) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_7 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 8) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_8 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 9) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_9 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 10) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_10 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 11) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_11 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 12) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_12 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 13) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_13 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 14) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_14 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 15) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_15 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        } elseif ($SlotId == 16) {
+            $cycleX4Data =
+                $this->db
+                ->select('t1.*,t2.userID')
+                ->from('jumpx4slots_16 t1')
+                ->join('user_registration t2', 't2.uid = t1.juID', 'FULL')
+                ->order_by('t1.x4id', 'ASC')
+                ->where(array('uid' => $uid, 'level !=' => '', 'branch !=' => '', 'position !=' => ''))
+                ->get()
+                ->result();
+        }
+
+
+        if (!empty($cycleX4Data)) {
+
+            $ChunK = array_chunk($cycleX4Data, 6);
+
+            echo json_encode($ChunK[$key]);
+        }
+    }
+    
+    
+    
+    // public function SendEmailtouser($email, $password,$userID)
+    // {
+    //     // $email = 'raghvandra.dixit@gmail.com';
+    //     $config = array(
+    //         'protocol' => 'smtp',
+    //         'smtp_host' => 'ssl://smtp.gmail.com',
+    //         'smtp_port' => 465,
+    //         'smtp_user' => 'skywebsoftindia@gmail.com',
+    //         'smtp_pass' => 'skywebsoftknp',
+    //         'mail_type' => 'html',
+    //         'charset'   => 'iso-8859-1',
+    //         'wordwrap' => TRUE
+    //     );
+    //     $this->load->library('email', $config);
+    //     $name = "Rising Future";
+    //     $from = "skywebsoftindia@gmail.com";
+    //     $to = $email;
+    //     $subject = "congratulation for Joining";
+    //     $text = "Your User Id Is : " . $userID." and  Your password is : " . $password;
+    //     $message = "<div>
+    //                     <table>
+    //                     <tr>
+    //                         <td><label>Name : </label></td>
+    //                         <td>" . $name . "</td>
+    //                     </tr>
+    //                     <tr>
+    //                         <td><label>From :</label></td>
+    //                         <td>" . $from . "</td>
+    //                     </tr>
+    //                     <tr>
+    //                         <td><label>Your Email :</label></td>
+    //                         <td>" . $email . "</td>
+    //                     </tr>
+    //                     <tr>
+    //                         <td><label>Message :</label></td>
+    //                         <td>" . $text . "</td>
+    //                     </tr>
+    //                     </table>
+    //                 </div>";
+    //     $this->email->from($from, '5Core');
+    //     $this->email->to($to);
+    //     $this->email->reply_to($from, '5Core');
+    //     $this->email->subject($subject);
+    //     $this->email->message($message);
+    //     $this->email->set_mailtype('html');
+    //     return $this->email->send();
+    // }
 }

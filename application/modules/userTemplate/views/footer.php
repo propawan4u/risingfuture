@@ -46,7 +46,7 @@
                 },
                 success: function(result) {
                     var response = JSON.parse(result);
-                    console.log(response);
+                    // console.log(response);
                     var show = '<div class="col-md-4 mt-3 rounded-lg text-light px-md-3 ml-3 mb-3 mx-auto"> <div class="body genealogy-body genealogy-scroll mx-auto"> <div class="genealogy-tree ml-4"> <ul class="mx-auto"> <li> <a href="javascript:void(0);"> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">'+ response[0].userID +' </small> </div> </div> </div> </a> <ul class="active"> <li> <a href="javascript:void(0);"> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">'+ response[0].usr_id +'</small> </div> </div> </div> </a> <ul class="active"> <li> <a href="javascript:void(0);"> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">'+ response[2].usr_id +'</small> </div> </div> </div> </a> </li> <li> <a href="javascript:void(0);"> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">'+ response[3].usr_id +'</small> </div> </div> </div> </a> </li> </ul> </li> <li> <a href="javascript:void(0); "> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">'+ response[1].usr_id +'</small> </div> </div> </div> </a> <ul class="active"> <li> <a href="javascript:void(0);"> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">'+ response[4].usr_id +'</small> </div> </div> </div> </a> </li> <li> <a href="javascript:void(0);"> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">'+ response[5].usr_id +'</small> </div> </div> </div> </a> </li> </ul> </li> </ul> </li> </ul> </div> </div> </div>';
                     $("#x4_cycle_id").html(show);
                 }
@@ -76,6 +76,34 @@
             });
 
         });
+        
+        // -------------------Get All X4 Slots Started----------------------------
+        
+        $("#get_cycle_id_by_x4_slot").change(function() {
+            var key = $("#get_cycle_id_by_x4_slot").val();
+            var slotId = $("#slotId").val();
+            // var show = ;
+            $.ajax({
+                url: "<?php echo base_url(); ?>show-tree-for-x4-slots",
+                method: "POST",
+                data: {
+                    key: key,
+                    slotId: slotId,
+                },
+                success: function(result) {
+
+                    var response = JSON.parse(result);
+                    // alert(result);
+                    console.log(response);
+                    // alert(response);
+                    var show = '<div class="col-md-4 mt-3 rounded-lg text-light px-md-3 ml-3 mb-3 mx-auto"> <div class="body genealogy-body genealogy-scroll mx-auto"> <div class="genealogy-tree ml-4"> <ul class="mx-auto"> <li> <a href="javascript:void(0);"> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">' + response[0].userID + ' </small> </div> </div> </div> </a> <ul class="active"> <li> <a href="javascript:void(0);"> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">' + response[0].juserID + '</small> </div> </div> </div> </a> <ul class="active"> <li> <a href="javascript:void(0);"> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">' + response[2].juserID + '</small> </div> </div> </div> </a> </li> <li> <a href="javascript:void(0);"> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">' + response[3].juserID + '</small> </div> </div> </div> </a> </li> </ul> </li> <li> <a href="javascript:void(0); "> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">' + response[1].juserID + '</small> </div> </div> </div> </a> <ul class="active"> <li> <a href="javascript:void(0);"> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">' + response[4].juserID + '</small> </div> </div> </div> </a> </li> <li> <a href="javascript:void(0);"> <div class="member-view-box"> <div class="member-image"> <img src="<?php echo base_url('assets/uploads/user-added-1.png'); ?>" alt="Member"> <div class="member-details"> <small class="text-light">' + response[5].juserID + '</small> </div> </div> </div> </a> </li> </ul> </li> </ul> </li> </ul> </div> </div> </div>';
+                    $("#x4_cycle_id_slots").html(show);
+                }
+            });
+
+        });
+
+        // ------------Get All X4 Slots Endded---------
         // ----------------Sweetalert2-----------------
 
         $(function() {
